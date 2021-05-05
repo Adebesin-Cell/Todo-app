@@ -1,36 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Frontend Mentor | Todo app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-bg">
+        <div class="main">
+          <h1 class="heading-primary">Todo</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="dark"
+            id="dark"
+            width="26"
+            height="26"
+          >
+            <path
+              fill="#FFF"
+              fill-rule="evenodd"
+              d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="light"
+            id="light"
+            width="26"
+            height="26"
+          >
+            <path
+              fill="#FFF"
+              fill-rule="evenodd"
+              d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="content">
+          <form action="#" class="form">
+            <div class="form__group">
+              <input
+                type="text"
+                class="input"
+                placeholder="Create a new todo"
+              />
+              <div class="check-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="check"
+                  id="check"
+                  width="11"
+                  height="9"
+                >
+                  <path
+                    fill="none"
+                    stroke="#FFF"
+                    stroke-width="2"
+                    d="M1 4.304L3.696 7l6-6"
+                  />
+                </svg>
+              </div>
+            </div>
+          </form>
 
+          <div class="todo">
+            <ul class="todo__list"></ul>
+            <div class="options">
+              <p class="item__left">
+                <span class="item__left-value">0</span>
+                Items left
+              </p>
+              <ul class="filters">
+                <li class="all">All</li>
+                <li class="active">Active</li>
+                <li class="completed">Completed</li>
+              </ul>
+              <p class="completed">Clear Completed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="button">Hey</button>
+    <!-- 
   Todo
 
-  <!-- Add dynamic number --> items left
+  Add dynamic number
+    items left All Active Completed Clear Completed Drag and drop to reorder
+    list
 
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="App.js"></script>
+  </body>
 </html>
