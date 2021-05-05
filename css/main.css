@@ -165,6 +165,11 @@ body {
           justify-content: center;
 }
 
+.checkbox:checked + .checkbox__label > .icon-box {
+  background: -webkit-gradient(linear, left bottom, right top, from(var(--green-gradient)), to(var(--purple-gradient)));
+  background: linear-gradient(to top right, var(--green-gradient), var(--purple-gradient));
+}
+
 .gradient {
   background: -webkit-gradient(linear, left bottom, right top, from(var(--green-gradient)), to(var(--purple-gradient)));
   background: linear-gradient(to top right, var(--green-gradient), var(--purple-gradient));
@@ -307,6 +312,10 @@ body {
 
 .options .completed {
   cursor: pointer;
+}
+
+.strike {
+  text-decoration: line-through;
 }
 
 .show {

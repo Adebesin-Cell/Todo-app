@@ -137,22 +137,26 @@ const displayUI = () => {
   myList.innerHTML = "";
   for (let i = 0; i < todoList.length; i++) {
     myList.innerHTML += `<li class="todo__item">
-                <div class="icon-box" id = ${todoList[i].id}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="check"
-                    id="check"
-                    width="11"
-                    height="9"
-                  >
-                    <path
-                      fill="none"
-                      stroke="#FFF"
-                      stroke-width="2"
-                      d="M1 4.304L3.696 7l6-6"
-                    />
-                  </svg>
-                </div>
+                <input type="checkbox" id="checkbox" class="checkbox" hidden />
+                <label for="checkbox" class="checkbox__label">
+                  <div class="icon-box">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="check"
+                      id="check"
+                      width="11"
+                      height="9"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#FFF"
+                        stroke-width="2"
+                        d="M1 4.304L3.696 7l6-6"
+                      />
+                    </svg>
+                  </div>
+                </label>
+
                 <p class="todo__description">${todoList[i].item}</p>
                 <div class="delete-box">
                   <svg
@@ -174,23 +178,23 @@ const displayUI = () => {
   value++;
   itemLeft.textContent = value;
   userInput.value = "";
-  const check = document.querySelectorAll(".icon-box");
-  const paragraph = document.querySelector(".todo__description");
-  check.forEach((item, i) => {
-    item.addEventListener("click", function () {
-      todoList[i].isChecked = true;
-      if (todoList[i].isChecked === true) {
-        item.classList.toggle("gradient");
-        paragraph.classList.add("strike");
-        value--;
-        itemLeft.textContent = `${value > 0 ? value : 0}`;
-      } else {
-        todoList.isChecked = false;
-        this.classList.remove("gradient");
-      }
-
-      console.log(todoList);
-    });
+  const iconBox = document.querySelectorAll(".icon-box");
+  const description = document.querySelectorAll(".todo__description");
+  const checkbox = document.querySelectorAll(".checkbox");
+  const strike = (e) => {
+    e.preventDefault();
+    if (e.target.checked) {
+      iconBox.forEach((icon) => {
+        icon.classList.toggle("gradient");
+      });
+      description.forEach((text) => {
+        text.classList.toggle("strike");
+      });
+    }
+  };
+  checkbox.forEach((check) => {
+    console.log(check);
+    check.addEventListener("click", strike);
   });
 };
 

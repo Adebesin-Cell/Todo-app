@@ -87,6 +87,13 @@ body {
   align-items: center;
   justify-content: center;
 }
+.checkbox:checked + .checkbox__label > .icon-box {
+  background: linear-gradient(
+    to top right,
+    var(--green-gradient),
+    var(--purple-gradient)
+  );
+}
 .gradient {
   background: linear-gradient(
     to top right,
@@ -197,9 +204,9 @@ body {
     cursor: pointer;
   }
 }
-// .strike {
-//   // display: none;
-// }
+.strike {
+  text-decoration: line-through;
+}
 .show {
   display: block;
 }
