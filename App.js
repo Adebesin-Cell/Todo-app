@@ -183,7 +183,7 @@ const displayUI = () => {
         item.classList.toggle("gradient");
         paragraph.classList.add("strike");
         value--;
-        itemLeft.textContent = value;
+        itemLeft.textContent = `${value > 0 ? value : 0}`;
       } else {
         todoList.isChecked = false;
         this.classList.remove("gradient");
