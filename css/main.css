@@ -3,16 +3,28 @@
   --purple-gradient: hsl(280, 87%, 65%);
   --w-sm: 400;
   --w-lg: 700;
+  --test: hsl(0, 0%, 98%);
+  --v-l-g: hsl(0, 0%, 98%);
+  --bgcolor: hsl(0, 0%, 98%);
   --very-Light-Gray: hsl(0, 0%, 98%);
   --very-Light-Grayish-Blue: hsl(236, 33%, 92%);
   --vight-Grayish-Blue: hsl(233, 11%, 84%);
   --dark-Grayish-Blue: hsl(236, 9%, 61%);
   --very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+  --v-dark-blue: hsl(235, 21%, 11%);
+  --Dark-Desaturated-Blue: hsl(235, 24%, 19%);
 }
 
 .dark-theme {
-  --v-dark-blue: hsl(235, 21%, 11%);
-  --Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --v-l-g: var(--v-dark-blue);
+  --test: hsl(240, 20%, 12%);
+  --test: hsl(235, 24%, 19%);
+  --test: hsl(235, 24%, 19%);
+  --test: hsl(240, 23%, 97%);
+  --test: hsl(240, 7%, 91%);
+  --test: hsl(232, 7%, 43%);
+  --test: hsl(236, 19%, 72%);
+  --bgcolor: var(--Dark-Desaturated-Blue);
   --Light-Grayish-Blue: hsl(234, 39%, 85%);
   --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
   --Dark-Grayish-Blue: hsl(234, 11%, 52%);
@@ -26,16 +38,6 @@
   --vight-Grayish-Blue: hsl(233, 11%, 84%);
   --dark-Grayish-Blue: hsl(236, 9%, 61%);
   --very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
-}
-
-.dark-theme {
-  --v-dark-blue: hsl(235, 21%, 11%);
-  --Dark-Desaturated-Blue: hsl(235, 24%, 19%);
-  --Light-Grayish-Blue: hsl(234, 39%, 85%);
-  --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
-  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
-  --very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
-  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
 }
 
 * {
@@ -55,6 +57,7 @@ html {
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.8rem;
+  background-color: var(--bgcolor);
 }
 
 .container {
@@ -94,6 +97,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 5rem;
 }
 
 .main {
@@ -133,8 +137,10 @@ body {
   border-radius: 5px;
   outline: none;
   font-family: inherit;
+  background-color: var(--bgcolor);
   font-size: inherit;
-  border: 1px solid var(--very-Light-Gray);
+  color: var(--Light-Grayish-Blue);
+  border: 1px solid var(--bgcolor);
   padding: 1rem 2rem;
   padding-left: 6rem;
 }
@@ -165,11 +171,6 @@ body {
           justify-content: center;
 }
 
-.checkbox:checked + .checkbox__label > .icon-box {
-  background: -webkit-gradient(linear, left bottom, right top, from(var(--green-gradient)), to(var(--purple-gradient)));
-  background: linear-gradient(to top right, var(--green-gradient), var(--purple-gradient));
-}
-
 .gradient {
   background: -webkit-gradient(linear, left bottom, right top, from(var(--green-gradient)), to(var(--purple-gradient)));
   background: linear-gradient(to top right, var(--green-gradient), var(--purple-gradient));
@@ -177,12 +178,13 @@ body {
 
 .todo {
   border-radius: 5px;
-  background-color: var(--very-Light-Gray);
+  background-color: var(--bgcolor);
   position: relative;
-  -webkit-box-shadow: 0 1px 3rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 3rem rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.2);
   color: var(--dark-Grayish-Blue);
   height: 50rem;
+  z-index: 2;
 }
 
 .todo__list {
@@ -295,7 +297,7 @@ body {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   color: var(--very-Light-Gray);
-  background-color: var(--dark-Grayish-Blue);
+  background-color: var(--bgcolor);
 }
 
 .options .filters {

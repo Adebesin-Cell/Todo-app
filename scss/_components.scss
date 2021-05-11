@@ -11,6 +11,7 @@ html {
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.8rem;
+  background-color: var(--bgcolor);
 }
 
 .container {
@@ -26,7 +27,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  //TODO : ALIGN ITEMS TO FLEX -START
 }
 .new-header {
   background-image: url(../images/bg-mobile-dark.jpg);
@@ -36,6 +36,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 5rem;
 }
 .main {
   display: flex;
@@ -64,8 +65,10 @@ body {
   border-radius: 5px;
   outline: none;
   font-family: inherit;
+  background-color: var(--bgcolor);
   font-size: inherit;
-  border: 1px solid var(--very-Light-Gray);
+  color: var(--Light-Grayish-Blue);
+  border: 1px solid var(--bgcolor);
   padding: 1rem 2rem;
   padding-left: 6rem;
 }
@@ -87,13 +90,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.checkbox:checked + .checkbox__label > .icon-box {
-  background: linear-gradient(
-    to top right,
-    var(--green-gradient),
-    var(--purple-gradient)
-  );
-}
+
 .gradient {
   background: linear-gradient(
     to top right,
@@ -103,18 +100,17 @@ body {
 }
 .todo {
   border-radius: 5px;
-  background-color: var(--very-Light-Gray);
+  background-color: var(--bgcolor);
   position: relative;
-  box-shadow: 0 1px 3rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.2);
   color: var(--dark-Grayish-Blue);
   height: 50rem;
+  z-index: 2;
   &__list {
     list-style-type: none;
-    // overflow-x: hidden;
     overflow-y: scroll;
     padding: 0;
     height: fit-content;
-
     padding-inline-start: 0;
     height: 50rem;
   }
@@ -163,7 +159,6 @@ body {
     visibility: visible;
   }
   &__list::-webkit-scrollbar {
-    // display: none;
     appearance: none;
   }
 }
@@ -189,7 +184,7 @@ body {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   color: var(--very-Light-Gray);
-  background-color: var(--dark-Grayish-Blue);
+  background-color: var(--bgcolor);
 
   .filters {
     display: flex;

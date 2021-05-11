@@ -3,16 +3,28 @@
   --purple-gradient: hsl(280, 87%, 65%);
   --w-sm: 400;
   --w-lg: 700;
+  --test: hsl(0, 0%, 98%);
+  --v-l-g: hsl(0, 0%, 98%);
+  --bgcolor: hsl(0, 0%, 98%);
   --very-Light-Gray: hsl(0, 0%, 98%);
   --very-Light-Grayish-Blue: hsl(236, 33%, 92%);
   --vight-Grayish-Blue: hsl(233, 11%, 84%);
   --dark-Grayish-Blue: hsl(236, 9%, 61%);
   --very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+  --v-dark-blue: hsl(235, 21%, 11%);
+  --Dark-Desaturated-Blue: hsl(235, 24%, 19%);
 }
 
 .dark-theme {
-  --v-dark-blue: hsl(235, 21%, 11%);
-  --Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --v-l-g: var(--v-dark-blue);
+  --test: hsl(240, 20%, 12%);
+  --test: hsl(235, 24%, 19%);
+  --test: hsl(235, 24%, 19%);
+  --test: hsl(240, 23%, 97%);
+  --test: hsl(240, 7%, 91%);
+  --test: hsl(232, 7%, 43%);
+  --test: hsl(236, 19%, 72%);
+  --bgcolor: var(--Dark-Desaturated-Blue);
   --Light-Grayish-Blue: hsl(234, 39%, 85%);
   --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
   --Dark-Grayish-Blue: hsl(234, 11%, 52%);
@@ -25,14 +37,4 @@
   --vight-Grayish-Blue: hsl(233, 11%, 84%);
   --dark-Grayish-Blue: hsl(236, 9%, 61%);
   --very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
-}
-
-.dark-theme {
-  --v-dark-blue: hsl(235, 21%, 11%);
-  --Dark-Desaturated-Blue: hsl(235, 24%, 19%);
-  --Light-Grayish-Blue: hsl(234, 39%, 85%);
-  --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
-  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
-  --very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
-  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
 }
