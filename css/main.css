@@ -183,7 +183,6 @@ body {
   -webkit-box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.2);
   color: var(--dark-Grayish-Blue);
-  height: 50rem;
   z-index: 2;
 }
 
@@ -197,6 +196,7 @@ body {
   -webkit-padding-start: 0;
           padding-inline-start: 0;
   height: 50rem;
+  border-radius: 5px;
 }
 
 .todo .icon-box {
@@ -214,6 +214,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+}
+
+.todo .icon-box > svg {
+  pointer-events: none;
+}
+
+.todo .icon-box > svg > path {
+  pointer-events: none;
 }
 
 .todo .icon-box:hover {
@@ -234,6 +243,7 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
+  cursor: pointer;
 }
 
 .todo__description {
@@ -253,6 +263,18 @@ body {
   transition: all 0.5s ease;
 }
 
+.todo .delete-box .delete {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.todo .delete-box .delete > path {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
 .todo__item:hover .delete-box {
   opacity: 1;
   visibility: visible;
@@ -266,6 +288,11 @@ body {
 .todo__list::-webkit-scrollbar {
   -webkit-appearance: none;
           appearance: none;
+}
+
+.todo .hide {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .dark,
@@ -292,7 +319,7 @@ body {
   left: 0;
   font-size: 1.3rem;
   width: 100%;
-  padding: 1.5rem;
+  padding: 2rem;
   z-index: 19999;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;

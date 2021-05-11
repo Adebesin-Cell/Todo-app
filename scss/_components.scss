@@ -104,7 +104,6 @@ body {
   position: relative;
   box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.2);
   color: var(--dark-Grayish-Blue);
-  height: 50rem;
   z-index: 2;
   &__list {
     list-style-type: none;
@@ -113,6 +112,7 @@ body {
     height: fit-content;
     padding-inline-start: 0;
     height: 50rem;
+    border-radius: 5px;
   }
   .icon-box {
     height: 2rem;
@@ -123,6 +123,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
+    > svg {
+      pointer-events: none;
+
+      > path {
+        pointer-events: none;
+      }
+    }
   }
   .icon-box:hover {
     cursor: pointer;
@@ -135,6 +144,7 @@ body {
     align-items: center;
     height: fit-content;
     width: 100%;
+    cursor: pointer;
   }
   &__description {
     margin-right: auto;
@@ -147,6 +157,18 @@ body {
     visibility: hidden;
     cursor: pointer;
     transition: all 0.5s ease;
+
+    .delete {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      > path {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+    }
   }
 
   &__item:hover .delete-box {
@@ -160,6 +182,10 @@ body {
   }
   &__list::-webkit-scrollbar {
     appearance: none;
+  }
+  .hide {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 .dark,
@@ -179,7 +205,7 @@ body {
   left: 0;
   font-size: 1.3rem;
   width: 100%;
-  padding: 1.5rem;
+  padding: 2rem;
   z-index: 19999;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
