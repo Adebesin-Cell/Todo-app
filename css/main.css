@@ -54,6 +54,24 @@ html {
           box-sizing: border-box;
 }
 
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.8rem;
@@ -82,9 +100,21 @@ body {
           align-items: center;
 }
 
+@media only screen and (max-width: 600px) {
+  .header-bg {
+    background-image: url(/images/bg-mobile-light.jpg);
+  }
+}
+
 .new-header {
   background-image: url(../images/bg-mobile-dark.jpg);
   height: 50vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .new-header {
+    background-image: url(/images/bg-mobile-dark.jpg);
+  }
 }
 
 .wrapper {
@@ -115,7 +145,7 @@ body {
 .main,
 .content {
   height: 50%;
-  width: 480px;
+  width: 550px;
 }
 
 .heading-primary {
@@ -133,7 +163,7 @@ body {
 .input {
   width: 100%;
   display: block;
-  height: 5rem;
+  height: 6rem;
   border-radius: 5px;
   outline: none;
   font-family: inherit;
@@ -236,6 +266,7 @@ body {
   border-bottom: 1px solid var(--dark-Grayish-Blue);
   padding: 1.5rem;
   padding-left: 2.5rem;
+  padding-right: 2.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -286,8 +317,11 @@ body {
 }
 
 .todo__list::-webkit-scrollbar {
+  -moz-appearance: none;
   -webkit-appearance: none;
           appearance: none;
+  border: none;
+  width: 0;
 }
 
 .todo .hide {
@@ -353,5 +387,14 @@ body {
 
 .hide {
   display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-bg {
+    padding: 0 2rem;
+  }
+  .content {
+    padding: 0 2rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

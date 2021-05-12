@@ -7,6 +7,15 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  @media only screen and (max-width: 1200px) {
+    font-size: 56.25%;
+  }
+  @media only screen and (max-width: 900px) {
+    font-size: 50%;
+  }
+  @media only screen and (min-width: 1800px) {
+    font-size: 75%;
+  }
 }
 body {
   font-family: "Josefin Sans", sans-serif;
@@ -27,10 +36,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 600px) {
+    background-image: url(/images/bg-mobile-light.jpg);
+  }
 }
 .new-header {
   background-image: url(../images/bg-mobile-dark.jpg);
   height: 50vh;
+  @media only screen and (max-width: 600px) {
+    background-image: url(/images/bg-mobile-dark.jpg);
+  }
 }
 .wrapper {
   display: flex;
@@ -46,7 +61,7 @@ body {
 .main,
 .content {
   height: 50%;
-  width: 480px;
+  width: 550px;
 }
 .heading-primary {
   text-transform: uppercase;
@@ -61,7 +76,7 @@ body {
 .input {
   width: 100%;
   display: block;
-  height: 5rem;
+  height: 6rem;
   border-radius: 5px;
   outline: none;
   font-family: inherit;
@@ -141,6 +156,7 @@ body {
     border-bottom: 1px solid var(--dark-Grayish-Blue);
     padding: 1.5rem;
     padding-left: 2.5rem;
+    padding-right: 2.5rem;
     align-items: center;
     height: fit-content;
     width: 100%;
@@ -181,7 +197,10 @@ body {
     visibility: visible;
   }
   &__list::-webkit-scrollbar {
+    -moz-appearance: none;
     appearance: none;
+    border: none;
+    width: 0;
   }
   .hide {
     opacity: 0;
@@ -233,4 +252,25 @@ body {
 }
 .hide {
   display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  // .container {
+  //   height: fit-content;
+  // }
+  // .options .filters {
+  //   position: absolute;
+  //   width: 100%;
+  //   background-color: red;
+  //   top: 10rem;
+  //   margin-bottom: 15rem;
+  // }
+  // .todo {
+  // }
+  .header-bg {
+    padding: 0 2rem;
+  }
+  .content {
+    padding: 0 2rem;
+  }
 }

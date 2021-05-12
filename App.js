@@ -9,6 +9,11 @@ const lightSwitch = document.getElementById("light");
 const darkSwitch = document.getElementById("dark");
 const header = document.querySelector(".header-bg");
 const body = document.querySelector("body");
+const itemLeft = document.querySelector(".item__left-value");
+
+//state variables
+
+let count = 0;
 //functions
 
 function addTodo() {
@@ -62,6 +67,8 @@ function addTodo() {
 function todoApp(e) {
   e.preventDefault();
   addTodo();
+  count++;
+  itemLeft.textContent = count;
 }
 function deleteCheck(e) {
   const check = document.querySelector(".icon-box");
@@ -72,6 +79,8 @@ function deleteCheck(e) {
   //delete todo
   if (item.classList[0] === "delete-box") {
     const todos = item.parentElement;
+    count--;
+    itemLeft.textContent = count;
     todos.remove();
   }
 
@@ -104,6 +113,7 @@ const themeSwicther = function () {
     lightSwitch.classList.add("show");
     body.classList.add("dark-theme");
   });
+  localStorage.setItem("theme", themeSwicther);
 };
 
 //initializes the theme switcher on load of the page
