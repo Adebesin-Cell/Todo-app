@@ -71,9 +71,6 @@ function todoApp(e) {
   itemLeft.textContent = count;
 }
 function deleteCheck(e) {
-  const check = document.querySelector(".icon-box");
-  const checkmark = document.querySelector(".check");
-  const p = document.querySelector(".todo__description");
   const item = e.target;
 
   //delete todo
@@ -85,17 +82,14 @@ function deleteCheck(e) {
   }
 
   if (item.classList[0] === "icon-box") {
-    check.classList.toggle("gradient");
-    p.classList.toggle("strike");
-    checkmark.classList.toggle("hide");
+    // const checkItem = item.siblingElement;
+    toggle();
   }
 }
 //event listeners
 
 form.addEventListener("submit", todoApp);
 todoContainer.addEventListener("click", deleteCheck);
-//storage
-const todoList = [];
 
 //THEME SWITCHER
 
@@ -118,3 +112,12 @@ const themeSwicther = function () {
 
 //initializes the theme switcher on load of the page
 themeSwicther();
+
+function toggle() {
+  const check = document.querySelector(".icon-box");
+  const checkmark = document.querySelector(".check");
+  const p = document.querySelector(".todo__description");
+  check.classList.toggle("gradient");
+  p.classList.toggle("strike");
+  checkmark.classList.toggle("hide");
+}

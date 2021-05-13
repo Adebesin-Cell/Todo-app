@@ -6,6 +6,8 @@
   --test: hsl(0, 0%, 98%);
   --v-l-g: hsl(0, 0%, 98%);
   --bgcolor: hsl(0, 0%, 98%);
+  --text: hsl(236, 9%, 61%);
+  --todo__text: hsl(235, 24%, 19%);
   --very-Light-Gray: hsl(0, 0%, 98%);
   --very-Light-Grayish-Blue: hsl(236, 33%, 92%);
   --vight-Grayish-Blue: hsl(233, 11%, 84%);
@@ -16,14 +18,9 @@
 }
 
 .dark-theme {
+  --todo__text: var(--very-Light-Gray);
   --v-l-g: var(--v-dark-blue);
-  --test: hsl(240, 20%, 12%);
-  --test: hsl(235, 24%, 19%);
-  --test: hsl(235, 24%, 19%);
-  --test: hsl(240, 23%, 97%);
-  --test: hsl(240, 7%, 91%);
-  --test: hsl(232, 7%, 43%);
-  --test: hsl(236, 19%, 72%);
+  --text: var(--very-dark-Grayish-Blue);
   --bgcolor: var(--Dark-Desaturated-Blue);
   --Light-Grayish-Blue: hsl(234, 39%, 85%);
   --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);

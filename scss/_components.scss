@@ -167,6 +167,7 @@ body {
     align-self: center;
     word-wrap: break-word;
     word-break: break-all;
+    color: var(--todo__text);
   }
   .delete-box {
     opacity: 0;
@@ -223,12 +224,13 @@ body {
   bottom: 0;
   left: 0;
   font-size: 1.3rem;
+  font-weight: var(--w-lg);
   width: 100%;
   padding: 2rem;
   z-index: 19999;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  color: var(--very-Light-Gray);
+  color: var(--text);
   background-color: var(--bgcolor);
 
   .filters {
@@ -246,6 +248,7 @@ body {
 }
 .strike {
   text-decoration: line-through;
+  opacity: 0.5;
 }
 .show {
   display: block;
@@ -253,7 +256,9 @@ body {
 .hide {
   display: none;
 }
-
+.active {
+  color: #6e94db;
+}
 @media only screen and (max-width: 600px) {
   // .container {
   //   height: fit-content;
