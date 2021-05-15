@@ -40,29 +40,24 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 @media only screen and (max-width: 1200px) {
   html {
     font-size: 56.25%;
   }
 }
-
 @media only screen and (max-width: 900px) {
   html {
     font-size: 50%;
   }
 }
-
 @media only screen and (min-width: 1800px) {
   html {
     font-size: 75%;
@@ -86,17 +81,10 @@ body {
   height: 50vh;
   background-position: top center;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 @media only screen and (max-width: 600px) {
   .header-bg {
     background-image: url(/images/bg-mobile-light.jpg);
@@ -107,7 +95,6 @@ body {
   background-image: url(../images/bg-mobile-dark.jpg);
   height: 50vh;
 }
-
 @media only screen and (max-width: 600px) {
   .new-header {
     background-image: url(/images/bg-mobile-dark.jpg);
@@ -115,28 +102,16 @@ body {
 }
 
 .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 5rem;
 }
 
 .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main,
@@ -181,147 +156,105 @@ body {
   position: absolute;
   top: 50%;
   left: 5%;
-  -webkit-transform: translate(-5%, -50%);
-          transform: translate(-5%, -50%);
+  transform: translate(-5%, -50%);
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   border: 1px solid var(--very-Dark-Grayish-Blue);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.gradient {
-  background: -webkit-gradient(linear, left bottom, right top, from(var(--green-gradient)), to(var(--purple-gradient)));
-  background: linear-gradient(to top right, var(--green-gradient), var(--purple-gradient));
+  align-items: center;
+  justify-content: center;
 }
 
 .todo {
   border-radius: 5px;
   background-color: var(--bgcolor);
   position: relative;
-  -webkit-box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.2);
   color: var(--dark-Grayish-Blue);
   z-index: 2;
 }
-
 .todo__list {
   list-style-type: none;
   overflow-y: scroll;
   padding: 0;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
+  padding-inline-start: 0;
   height: 50rem;
   border-radius: 5px;
 }
-
 .todo .icon-box {
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
+  appearance: none;
   border: 1px solid var(--very-Dark-Grayish-Blue);
   margin-right: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
-
+.todo .icon-box:checked {
+  background: url("../images/icon-check.svg") 1px center no-repeat, linear-gradient(to top right, var(--green-gradient), var(--purple-gradient));
+}
 .todo .icon-box > svg {
   pointer-events: none;
 }
-
 .todo .icon-box > svg > path {
   pointer-events: none;
 }
-
 .todo .icon-box:hover {
   cursor: pointer;
 }
-
 .todo__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid var(--dark-Grayish-Blue);
   padding: 1.5rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
+  align-items: center;
   height: fit-content;
   width: 100%;
   cursor: pointer;
 }
-
 .todo__description {
   margin-right: auto;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   word-wrap: break-word;
   word-break: break-all;
   color: var(--todo__text);
 }
-
 .todo .delete-box {
   opacity: 0;
   visibility: hidden;
   cursor: pointer;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-
 .todo .delete-box .delete {
   width: 100%;
   height: 100%;
   pointer-events: none;
 }
-
 .todo .delete-box .delete > path {
   width: 100%;
   height: 100%;
   pointer-events: none;
 }
-
 .todo__item:hover .delete-box {
   opacity: 1;
   visibility: visible;
 }
-
 .todo .show {
   opacity: 1;
   visibility: visible;
 }
-
 .todo__list::-webkit-scrollbar {
   -moz-appearance: none;
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   border: none;
   width: 0;
 }
-
 .todo .hide {
   opacity: 0;
   visibility: hidden;
@@ -338,14 +271,9 @@ body {
 
 .options {
   border-top: 1px solid var(--dark-Grayish-Blue);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -359,19 +287,14 @@ body {
   color: var(--text);
   background-color: var(--bgcolor);
 }
-
 .options .filters {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
 }
-
 .options .filters li {
   margin-right: 1rem;
   cursor: pointer;
 }
-
 .options .completed {
   cursor: pointer;
 }
@@ -397,8 +320,10 @@ body {
   .header-bg {
     padding: 0 2rem;
   }
+
   .content {
     padding: 0 2rem;
   }
 }
+
 /*# sourceMappingURL=main.css.map */
