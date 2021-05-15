@@ -138,7 +138,7 @@ body {
     cursor: pointer;
 
     &:checked {
-      background: url('../images/icon-check.svg') 1px center no-repeat,
+      background: url('../images/icon-check.svg') center center no-repeat,
         linear-gradient(
           to top right,
           var(--green-gradient),

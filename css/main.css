@@ -196,7 +196,7 @@ body {
   cursor: pointer;
 }
 .todo .icon-box:checked {
-  background: url("../images/icon-check.svg") 1px center no-repeat, linear-gradient(to top right, var(--green-gradient), var(--purple-gradient));
+  background: url("../images/icon-check.svg") center center no-repeat, linear-gradient(to top right, var(--green-gradient), var(--purple-gradient));
 }
 .todo .icon-box > svg {
   pointer-events: none;
