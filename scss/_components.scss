@@ -18,7 +18,7 @@ html {
   }
 }
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1.8rem;
   background-color: var(--bgcolor);
 }
@@ -106,13 +106,9 @@ body {
   justify-content: center;
 }
 
-.gradient {
-  background: linear-gradient(
-    to top right,
-    var(--green-gradient),
-    var(--purple-gradient)
-  );
-}
+// .gradient {
+
+// }
 .todo {
   border-radius: 5px;
   background-color: var(--bgcolor);
@@ -133,12 +129,22 @@ body {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
+    appearance: none;
     border: 1px solid var(--very-Dark-Grayish-Blue);
     margin-right: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    &:checked {
+      background: url('../images/icon-check.svg') center center no-repeat,
+        linear-gradient(
+          to top right,
+          var(--green-gradient),
+          var(--purple-gradient)
+        );
+    }
 
     > svg {
       pointer-events: none;
